@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <template id="progress-bar-template">
+        <style>
+            /* Define CSS styles for the progress bar */
+            #total_progress {
+                width: 100%;
+                background: #dfdfdf; /* Note: Use hex color without quotes */
+                margin: 5px 0px;
+            }
+
+            #current_progress {
+                 height: 10px;
+            }
+
+            .btn {
+                border: none;
+                padding: .3rem .6rem;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+
+            div,
+            button {
+                transition: .3s all ease-in-out;
+            }
+        </style>
+        <div class="wrapper">
+            <div id="total_progress">
+                <div id="current_progress"></div>
+            </div>
+            <button class="btn" id="increase">Increase Progress</button>
+            <button class="btn" id="random_color">Random color</button>
+        </div>
+    </template>
+
+    <!-- Use custom element -->
+    <progress-bar color="#6060ff" step="10" size="sm" value="20"></progress-bar>
+</body>
+
+</html>
